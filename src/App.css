@@ -80,3 +80,36 @@ footer {
 main {
   padding-bottom: 2rem;
 }
+
+.cocktail-image {
+  width: 150px;
+  height: auto;
+  margin: 10px 0;
+  border: 3px solid #333;
+  border-radius: 8px;
+}
+
+.cocktail-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cocktail-item {
+  width: 45%;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-position: inside; /* Aligner les points des listes à l'intérieur */
+  padding-left: 0; /* Supprimer le padding gauche */
+}
+
+.cocktail-list-container {
+  border: 3px solid #333;
+  border-radius: 8px;
+  margin: 50px;
+  background-color: #9bc0cf;
+}
+
