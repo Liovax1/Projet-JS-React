@@ -1,26 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './header' // On importe le composant Header
-import Footer from './footer' // On importe le composant Footer
-import ListeCocktails from './ListeCocktails' // On importe le composant ListeCocktails
-import AleatoireCocktail from './AleatoireCocktail' // On importe le composant AleatoireCocktail
+import { useState, useEffect } from 'react';
+import './App.css';
+import Header from './header';
+import Footer from './footer';
+import ListeCocktails from './ListeCocktails';
+import AleatoireCocktail from './AleatoireCocktail';
+import RecuperationCocktails from './RecuperationCocktails';
 
 function App() { 
-  const userName = 'Liova'
+  const userName = 'Liova';
+  const [cocktails, setCocktails] = useState([]);
+
+  useEffect(() => {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail')
+      .then(response => response.json())
+      .then(data => setCocktails(data.drinks));
+  }, []);
 
   return (
-    <> {/* On retourne plusieurs éléments, c'est une div fantôme */}
-      <Header userName={userName} /> {/* On affiche le composant Header */}
+    <>
+      <Header userName={userName} />
       <main>
-        <h1>TP React Cocktails</h1> {/* On affiche le titre */}
-        <ListeCocktails /> {/* On affiche le composant ListeCocktails */}
-        <AleatoireCocktail /> {/* On affiche le composant AleatoireCocktail */}
+        <h1>TP React Cocktails</h1>
+        <ListeCocktails cocktails={cocktails.slice(0, 10)} /> {/* Passer les 10 premiers cocktails en props */}
+        <AleatoireCocktail />
+        <RecuperationCocktails cocktails={cocktails} /> {/* Passer tous les cocktails en props */}
       </main>
-      <Footer /> {/* On affiche le composant Footer */}
+      <Footer userName={userName}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

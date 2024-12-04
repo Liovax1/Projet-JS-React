@@ -130,3 +130,15 @@ ul {
   background-color: #9bc0cf;
 }
 
+.cocktail-pair {
+  display: flex;
+  justify-content: center; /* Centrer les paires de cocktails */
+  width: 100%;
+  margin-bottom: 40px; /* Augmenter l'espace entre les paires */
+  padding: 20px; /* Ajuster le padding autour des paires */
+}
+
+.cocktail-pair > .cocktail-card {
+  margin: 0 100px; /* Ajouter de l'espace entre deux cocktails côte à côte */
+}
+

@@ -8,7 +8,6 @@ const Header = ({ userName }) => {
             <nav>
                 <div className="left">
                     <a href="/">Accueil</a>
-                    {/* <p className="right">{userName}</p> */}
                 </div>
                 <div className="center">
                     <a href="https://vite.dev" target="_blank">
@@ -17,6 +16,7 @@ const Header = ({ userName }) => {
                     <a href="https://react.dev" target="_blank">
                         <img src={reactLogo} className="logo react" alt="React logo" width={50} />
                     </a>
+                    <p className="right">{userName}</p>
                 </div>
             </nav>
         </header>
