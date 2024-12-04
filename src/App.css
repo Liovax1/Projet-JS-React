@@ -5,8 +5,8 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 3em; /* Réduire encore la taille des logos */
+  padding: 0.5em; /* Réduire encore le padding des logos */
   will-change: filter;
   transition: filter 300ms;
 }
@@ -47,21 +47,38 @@ header, footer {
 
 header {
   background-color: #333;
-  padding: 10px 0;
   text-align: center;
 }
 
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+header nav .left {
+  position: absolute;
+  left: 15px;
+}
+
+header nav .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .right {
+  position: absolute;
+  right: 15px;
+  color: white;
+  font-size: 1rem;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 header nav a:hover {

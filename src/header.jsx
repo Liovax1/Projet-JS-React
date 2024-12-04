@@ -1,13 +1,26 @@
 import React from "react";
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 
-const Header = () => {
-  return (
-    <header>
+const Header = ({ userName }) => {
+    return (
+        <header>
             <nav>
-                <a href="/">Accueil</a>
+                <div className="left">
+                    <a href="/">Accueil</a>
+                    {/* <p className="right">{userName}</p> */}
+                </div>
+                <div className="center">
+                    <a href="https://vite.dev" target="_blank">
+                        <img src={viteLogo} className="logo" alt="Vite logo" width={50} />
+                    </a>
+                    <a href="https://react.dev" target="_blank">
+                        <img src={reactLogo} className="logo react" alt="React logo" width={50} />
+                    </a>
+                </div>
             </nav>
         </header>
-  );
+    );
 }
 
 export default Header;

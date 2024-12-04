@@ -8,9 +8,11 @@ import ListeCocktails from './ListeCocktails' // On importe le composant ListeCo
 import AleatoireCocktail from './AleatoireCocktail' // On importe le composant AleatoireCocktail
 
 function App() { 
+  const userName = 'Liova'
+
   return (
     <> {/* On retourne plusieurs éléments, c'est une div fantôme */}
-      <Header /> {/* On affiche le composant Header */}
+      <Header userName={userName} /> {/* On affiche le composant Header */}
       <main>
         <h1>TP React Cocktails</h1> {/* On affiche le titre */}
         <ListeCocktails /> {/* On affiche le composant ListeCocktails */}
