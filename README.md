@@ -9,11 +9,9 @@ Currently, two official plugins are available:
 
 # TP React
 
-** Prérequis : Avoir Node.js et npm installés sur votre machine
+* Prérequis : Avoir Node.js et npm installés sur votre machine
 
 ## Installation du projet
-
-### Installer nvm
 
 1) Créer votre projet
 
